@@ -15,9 +15,11 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    transitionDuration: {
+      '3000': '3000ms',
+    },
     extend: {
       colors: {
-        night:"#626262",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

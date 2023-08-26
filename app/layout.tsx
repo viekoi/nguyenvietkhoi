@@ -1,28 +1,27 @@
-import './globals.css'
+import "./globals.css";
+import NextThemeProvider from "@/providers/theme-provider";
 
 export const metadata = {
-  title: 'Nguyen Viet Khoi',
-  description: 'Personal Portfolio',
-}
+  title: "Nguyen Viet Khoi",
+  description: "Personal Portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body >
-        <div className="grid grid-cols-5 min-h-screen bg-gradient-to-b from-black from-35% to-night text-white ">
-          <div className="hidden lg:block lg:col-span-1">
-            right
+      <body>
+        <NextThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="grid grid-cols-5 min-h-screen bg-gradient-to-b from-blue-600 to-[#fefefe] dark:bg-gradient-to-b dark:from-black dark:from-35% dark:to-[#626262] dark:text-white ">
+            <div className="hidden lg:block lg:col-span-1">right</div>
+            {children}
+            <div className="hidden lg:block lg:col-span-1">left</div>
           </div>
-          {children}
-          <div className="hidden lg:block lg:col-span-1">
-            left
-          </div>
-        </div>
+        </NextThemeProvider>
       </body>
     </html>
-  )
+  );
 }
