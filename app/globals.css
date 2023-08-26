@@ -165,14 +165,14 @@
   width: 6.25em;
   right: -2.5em;
   bottom: 0;
-  animation: twinkle 3s infinite forwards;
+  animation: twinkle 2s infinite forwards;
 }
 .themeBtn_moon:after {
   height: 11.8em;
   width: 11.8em;
   left: -2.8em;
   bottom: -2.8em;
-  animation: twinkle 3.5s infinite forwards;
+  animation: twinkle 2.5s infinite forwards;
 }
 .themeBtn_stars {
   position: absolute;
@@ -184,6 +184,18 @@
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
     0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
   animation: starsfall linear infinite forwards;
+}
+
+.stars {
+  height: 0.15em;
+  width: 0.15em;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 3em 9.3em #ffffff, -1.8em 11.2em #ffffff, 2.5em 16.2em #ffffff,
+    -5em 6.2em #ffffff, -5.6em -0.6em #ffffff, -5.6em 3.7em 0 0.06em #ffffff,
+    -5em 17.5em 0 0.05em #ffffff, -7.5em 14.3em #ffffff;
+  animation: twinkle 12s infinite forwards;
 }
 
 .themeBtn_stars::before {
