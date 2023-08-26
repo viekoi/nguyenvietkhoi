@@ -1,5 +1,5 @@
 import "./globals.css";
-import NextThemeProvider from "@/providers/theme-provider";
+import NextThemeProvider from './../providers/theme-provider'
 
 export const metadata = {
   title: "Nguyen Viet Khoi",

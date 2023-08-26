@@ -19,6 +19,7 @@ const Sky = () => {
   }, [theme]);
 
   if (!isThemed) return null;
+  
   return (
     <div className="h-[35vh] relative ">
       <div className="h-full text-[6px] md:text-[10px]  relative z-[1px] overflow-hidden  ">
