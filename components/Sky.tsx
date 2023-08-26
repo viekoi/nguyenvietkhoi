@@ -10,20 +10,21 @@ import Dog from "./Dog";
 const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Sky = () => {
+  console.log('re')
   const [isThemed, setIsThemed] = useState(false);
 
   const { setTheme, theme } = useTheme();
 
   useEffect(() => {
     setIsThemed(true);
-  }, [theme]);
+  }, []);
 
   if (!isThemed) return null;
-  
+
   return (
     <div className="h-[35vh] relative ">
       <div className="h-full text-[6px] md:text-[10px]  relative z-[1px] overflow-hidden  ">
-        {theme == "dark" ? (
+        {/* {theme == "dark" ? (
           <>
             <Star className="left-[20%]"/>
             <Star className="left-[40%]"/>
@@ -35,6 +36,21 @@ const Sky = () => {
           </>
         ) : (
           <Dog />
+        )} */}
+        {theme === "light" ? (
+          <>
+            <Dog />
+          </>
+        ) : (
+          <>
+            <Star className="left-[20%]" />
+            <Star className="left-[40%]" />
+            <Star className="left-[60%]" />
+            <Star className="left-[80%]" />
+            {stars.map((star, index) => {
+              return <ShootingStar index={index} key={index} />;
+            })}
+          </>
         )}
 
         <div
