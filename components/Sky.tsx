@@ -6,6 +6,7 @@ import Star from "./Star";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import Dog from "./Dog";
+import Cloud from "./Cloud";
 
 const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -39,7 +40,12 @@ const Sky = () => {
         )} */}
         {theme === "light" ? (
           <>
-            <Dog />
+          <Cloud className="top-[10%] left-[20%] absolute"/>
+          <Cloud className="top-[25%] left-[40%] absolute"/>
+          <Cloud className="top-[20%] left-[60%] absolute"/>
+          <Cloud className="top-[15%] left-[80%] absolute"/>
+
+          <Dog />
           </>
         ) : (
           <>
