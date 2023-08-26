@@ -1,5 +1,5 @@
 import "./globals.css";
-import NextThemeProvider from './../providers/theme-provider'
+import NextThemeProvider from "./../providers/theme-provider";
 
 export const metadata = {
   title: "Nguyen Viet Khoi",
@@ -15,10 +15,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <NextThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="grid grid-cols-5 min-h-screen bg-gradient-to-b from-[#2563eb] to-[#fefefe] dark:bg-gradient-to-b dark:from-black dark:from-35% dark:to-[#626262] dark:text-white ">
-            <div className="hidden lg:block lg:col-span-1"/>
+          <div className="grid grid-cols-5 min-h-screen bg-gradient-to-b from-[#6dd3e7] to-[#fefefe] dark:bg-gradient-to-b dark:from-black dark:from-35% dark:to-[#626262] dark:text-white ">
+            <div className="hidden lg:block lg:col-span-1" />
             {children}
-            <div className="hidden lg:block lg:col-span-1"/>
+            <div className="hidden lg:block lg:col-span-1" />
           </div>
         </NextThemeProvider>
       </body>
