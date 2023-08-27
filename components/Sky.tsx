@@ -8,10 +8,9 @@ import { cn } from "@/lib/utils";
 import Dog from "./Dog";
 import Cloud from "./Cloud";
 
-const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15];
 
 const Sky = () => {
-  console.log('re')
   const [isThemed, setIsThemed] = useState(false);
 
   const { setTheme, theme } = useTheme();
@@ -23,29 +22,15 @@ const Sky = () => {
   if (!isThemed) return null;
 
   return (
-    <div className="h-[35vh] relative ">
-      <div className="h-full text-[6px] md:text-[10px]  relative z-[1px] overflow-hidden  ">
-        {/* {theme == "dark" ? (
-          <>
-            <Star className="left-[20%]"/>
-            <Star className="left-[40%]"/>
-            <Star className="left-[60%]"/>
-            <Star className="left-[80%]"/>
-            {stars.map((star, index) => {
-              return <ShootingStar index={index} key={index} />;
-            })}
-          </>
-        ) : (
-          <Dog />
-        )} */}
+    <div className="h-[60vh] relative ">
+      <div className="h-full text-[5px] sm:text-[8px] md:text-[10px]  relative z-[1px] overflow-hidden  ">
         {theme === "light" ? (
           <>
-          <Cloud className="top-[10%] left-[20%] absolute"/>
-          <Cloud className="top-[25%] left-[40%] absolute"/>
-          <Cloud className="top-[20%] left-[60%] absolute"/>
-          <Cloud className="top-[15%] left-[80%] absolute"/>
-
-          <Dog />
+            <Cloud className="top-[10%] left-[20%] absolute" />
+            <Cloud className="top-[25%] left-[40%] absolute" />
+            <Cloud className="top-[20%] left-[60%] absolute" />
+            <Cloud className="top-[15%] left-[80%] absolute" />
+            <Dog />
           </>
         ) : (
           <>
@@ -84,14 +69,21 @@ const Sky = () => {
           />
         </div>
       </div>
-      <div className="absolute z-10 top-[100%] -translate-y-1/2 left-[50%] -translate-x-1/2">
+      <div className="absolute z-10 top-[65%]   -translate-y-1/2 left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center">
         <Image
           src={"/assets/me.jpg"}
           alt="me"
           width={250}
           height={250}
-          className="rounded-full"
+          className=" rounded-full w-[180px] h-[180px] md:w-[200px] md:h-[200px] lg:w-[225px] lg:h-[225px] "
         />
+
+        <h1 className="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold text-back dark:text-white ">
+          Nguyễn Việt Khôi
+        </h1>
+        <span className="font-semibold text-[12px] sm:text-[16px] text-[#f79e38] dark:text-stone-400">
+          Web and future Mobile dev
+        </span>
       </div>
     </div>
   );
