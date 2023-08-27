@@ -10,7 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { GraduationCap, Home, Mail } from "lucide-react";
+import { GraduationCap, Home, Mail, Facebook, Github } from "lucide-react";
+import Link from "next/link";
 
 interface AboutProps {
   className?: string;
@@ -18,16 +19,16 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ className, ...props }) => {
   return (
-    <Card className={cn("bg-white", className)}>
+    <Card className={cn("bg-white shadow-md", className)}>
       <CardHeader>
         <CardTitle>About me</CardTitle>
-        <CardDescription className="font-normal text-black">
+        <CardDescription className=" text-blue-600 font-bold ">
           Dev by day, gamer by night, hardworking, responsible, and competitive
           person.
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className=" flex flex-col gap-5">
+        <div className=" flex flex-col gap-4 opacity-[80%]">
           <div className="flex gap-4 items-start">
             <div className="">
               {" "}
@@ -35,13 +36,13 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
             </div>
             <div className="text-[14px] font-normal leading-[24px]">
               Studied Sofware Engineering at{" "}
-              <a
-                className="font-semibold"
+              <Link
+                className="font-semibold underline"
                 target="_blank"
                 href="https://www.ueh.edu.vn/"
               >
                 University of Economics Ho Chi Minh city
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -61,17 +62,40 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
               <Mail size={24} opacity={0.5} />
             </div>
             <div className="text-[14px] font-normal leading-[24px]">
-              <a
-                className="font-semibold"
+              <Link
+                className="font-semibold underline"
                 target="_blank"
                 href="mailto:khoinguyenviet1807@gmail.com"
               >
                 khoinguyenviet1807@gmail.com
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </CardContent>
+      <CardFooter>
+        <div className="flex gap-2 justify-end w-full ">
+          <Link
+            href="https://www.facebook.com/profile.php?id=100009650203975"
+            target="_blank"
+            rel="noreferrer"
+            className=""
+          >
+            <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300  bg-[#4267B2]">
+              <Facebook size={20} color="white" />
+            </div>
+          </Link>
+          <Link
+            href="https://github.com/viekoi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300 bg-black ">
+              <Github size={20} color="white" />
+            </div>
+          </Link>
+        </div>
+      </CardFooter>
     </Card>
   );
 };

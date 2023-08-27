@@ -160,7 +160,7 @@
 .themeBtn_moon:after {
   position: absolute;
   content: "";
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 .themeBtn_moon:before {
@@ -168,14 +168,14 @@
   width: 6.25em;
   right: -2.5em;
   bottom: 0;
-  animation: twinkle 2s infinite forwards;
+  animation: twinkle 3s infinite forwards;
 }
 .themeBtn_moon:after {
   height: 11.8em;
   width: 11.8em;
   left: -2.8em;
   bottom: -2.8em;
-  animation: twinkle 2.5s infinite forwards;
+  animation: twinkle 2.9s infinite forwards;
 }
 .themeBtn_stars {
   position: absolute;
