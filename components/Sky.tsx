@@ -68,7 +68,8 @@ const Sky = () => {
         <div
           className={cn(
             "h-full w-full absolute top-1/2 transition-transform duration-3000 rounded-[50%]",
-            theme === "light" ? "rotate-[0]" : "-rotate-180"
+            "dark:-rotate-180 rotate-0"
+            // theme === "light" ? "rotate-[0]" : "-rotate-180" 
           )}
         >
           <button
