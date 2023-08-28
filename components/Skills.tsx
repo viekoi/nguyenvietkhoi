@@ -13,7 +13,7 @@ import MongoDB from "../public/assets/skills/mongo.png";
 import Sql from "../public/assets/skills/sql.png";
 import Prisma from "../public/assets/skills/prisma.png";
 
-import React from "react";
+import React, { use } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -30,6 +30,9 @@ import {
 } from "@/components/ui/hover-card";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import FullSizeBtn from "./ui/FullSizeBtn";
+import useExpandSkills from "@/hooks/useExpandSkills";
 
 interface SKillsProps {
   className?: string;
@@ -71,42 +74,9 @@ const skills = [
   { skill: "Prisma", imageUrl: Prisma, url: `https://www.prisma.io/` },
 ];
 
-const Catagorized = [
-  {
-    title: "Coding Languages",
-    des: "JavaScript, Typescript",
-  },
-  {
-    title: "Frameworks ",
-    des: "ReactJs, NextJs",
-  },
-  {
-    title: "Styling",
-    des: "CSS, SASS, TAILWIND",
-  },
-  {
-    title: "State Management",
-    des: "Redux, Zustand, React Context Api",
-  },
-  {
-    title: "Auth",
-    des: "Next Auth, oAuth, Clerk, SupaBase",
-  },
-  {
-    title: "Database Languages",
-    des: "NoSql, Sql",
-  },
-  {
-    title: "Ui Frameworks",
-    des: "Radix, Shadcn, Bootstrap",
-  },
-  {
-    title: "Version Control",
-    des: "Git",
-  },
-];
-
 const Skills: React.FC<SKillsProps> = ({ className }) => {
+  const expandSkillsModal = useExpandSkills();
+
   return (
     <Card className={cn("bg-white shadow-md", className)}>
       <CardHeader>
@@ -117,9 +87,9 @@ const Skills: React.FC<SKillsProps> = ({ className }) => {
           <div className="grid grid-cols-skill  gap-10">
             {skills.map((skill, index) => {
               return (
-                <Link href={skill.url} key={index} target="_blank">
-                  <HoverCard openDelay={100} closeDelay={100}>
-                    <HoverCardTrigger asChild>
+                <HoverCard openDelay={100} closeDelay={100} key={index}>
+                  <HoverCardTrigger asChild>
+                    <Link href={skill.url}  target="_blank">
                       <Image
                         className="rounded-sm col-span-1 border-solid cursor-pointer hover:opacity-[80%]"
                         src={skill.imageUrl}
@@ -127,30 +97,21 @@ const Skills: React.FC<SKillsProps> = ({ className }) => {
                         height={50}
                         width={50}
                       />
-                    </HoverCardTrigger>
-                    <HoverCardContent className="w-fit px-2 py-1">
-                      <h4 className="text-sm font-semibold dark:text-white text-[12px]">
-                        @{skill.skill}
-                      </h4>
-                    </HoverCardContent>
-                  </HoverCard>
-                </Link>
+                    </Link>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-fit px-2 py-1">
+                    <h4 className="text-sm font-semibold dark:text-white text-[12px]">
+                      @{skill.skill}
+                    </h4>
+                  </HoverCardContent>
+                </HoverCard>
               );
             })}
           </div>
         </div>
       </CardContent>
       <CardFooter>
-        <div className="flex flex-col gap-4 mt-10">
-          {Catagorized.map((category, index) => {
-            return (
-              <div className="" key={index}>
-                <h4 className=" text-[14px] font-bold">{category.title}</h4>
-                <span className=" text-[12px] font-normal">{category.des}</span>
-              </div>
-            );
-          })}
-        </div>
+        <FullSizeBtn onClick={expandSkillsModal.onOpen}>More</FullSizeBtn>
       </CardFooter>
     </Card>
   );
