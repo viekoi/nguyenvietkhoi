@@ -75,7 +75,7 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
                     >
                       <div className="">
                         <Image
-                          src={`/assets/Journey/ueh.png`}
+                          src={`/assets/journey/ueh.png`}
                           alt="ueh"
                           width={24}
                           height={24}
