@@ -2,6 +2,7 @@ import Sky from "@/components/Sky";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Journey from "@/components/Journey";
+import Earth from "@/components/Earth";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Earth/>
     </>
   );
 }
