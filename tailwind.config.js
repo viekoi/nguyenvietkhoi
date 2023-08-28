@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // Simple 16 column grid
-        skill: "repeat(3, minmax(0, 100px))",
+        skill: "repeat(4, minmax(0, 50px))",
 
         // Complex site-specific column configuration
       },

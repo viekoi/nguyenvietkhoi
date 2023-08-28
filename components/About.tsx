@@ -71,29 +71,34 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
               </Link>
             </div>
           </div>
+
+         
         </div>
       </CardContent>
       <CardFooter>
-        <div className="flex gap-2 justify-end w-full ">
+        <div className="flex gap-2 w-full justify-end">
           <Link
             href="https://www.facebook.com/profile.php?id=100009650203975"
             target="_blank"
             rel="noreferrer"
-            className=""
+            className=" flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300  bg-[#4267B2] "
           >
-            <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300  bg-[#4267B2]">
-              <Facebook size={20} color="white" />
+            <div className="">
+              <Facebook size={16} color="white" />
             </div>
           </Link>
+
           <Link
-            href="https://github.com/viekoi"
-            target="_blank"
-            rel="noreferrer"
+           href="https://github.com/viekoi"
+           target="_blank"
+           rel="noreferrer"
+            className=" flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300  bg-black"
           >
-            <div className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300 bg-black ">
-              <Github size={20} color="white" />
+            <div className="">
+              <Github size={16} color="white" />
             </div>
           </Link>
+        
         </div>
       </CardFooter>
     </Card>

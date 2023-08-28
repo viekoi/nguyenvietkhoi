@@ -20,7 +20,7 @@ const Sky = () => {
   }, []);
 
   if (!isThemed) return (
-    <div className="h-[50vh] relative ">
+    <div className="h-[40vh] relative ">
       <div className="absolute z-50 top-[95%] -translate-y-[100%] left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center ">
         <Image
           src={"/assets/me.jpg"}
@@ -43,7 +43,7 @@ const Sky = () => {
  
 
   return (
-    <div className="h-[50vh] relative ">
+    <div className="h-[40vh] relative ">
       <div className="h-full text-[5px] sm:text-[8px] md:text-[10px]  relative z-[1px] overflow-hidden  ">
         {theme === "light" ? (
           <>
