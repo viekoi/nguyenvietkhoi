@@ -121,7 +121,7 @@ const ExpandSkillsModal = () => {
                 <div className="flex gap-2">
                   {extandSkill.skills.map((skill,index)=>{
                       return(
-                        <Badge imageUrl={skill.imageUrl} url={skill.url} className='w-[35px] h-[35px] '/>
+                        <Badge key={index} imageUrl={skill.imageUrl} url={skill.url} className='w-[35px] h-[35px] '/>
                       )
                   })}
                 </div>
