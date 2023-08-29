@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
 import React from "react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
-import Image from "next/image";
+
+import Badge from "./ui/Badge";
 
 import {
   Card,
@@ -13,6 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { BadgeHelp } from "lucide-react";
 
 interface JourneyProps {
   className?: string;
@@ -74,7 +75,7 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
                   2021 - Present | UEH University, HCM city{" "}
                   <span className="inline-block">
                     {" "}
-                    <Link
+                    {/* <Link
                       href="https://ueh.edu.vn"
                       target="_blank"
                       rel="noreferrer"
@@ -88,7 +89,8 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
                           height={24}
                         />
                       </div>
-                    </Link>
+                    </Link> */}
+                    <Badge imageUrl="/assets/journey/ueh.png" url="https://ueh.edu.vn"/>
                   </span>
                 </span>
                 <p className="font-medium w-full text-[12px] opacity-[80%] ">

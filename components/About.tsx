@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import { GraduationCap, Home, Mail, Facebook, Github } from "lucide-react";
 import Link from "next/link";
+import Badge from "./ui/Badge";
 
 interface AboutProps {
   className?: string;
@@ -71,34 +72,20 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
               </Link>
             </div>
           </div>
-
-         
         </div>
       </CardContent>
       <CardFooter>
         <div className="flex gap-2 w-full justify-end">
-          <Link
-            href="https://www.facebook.com/profile.php?id=100009650203975"
-            target="_blank"
-            rel="noreferrer"
-            className=" flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300  bg-[#4267B2] "
-          >
-            <div className="">
-              <Facebook size={16} color="white" />
-            </div>
-          </Link>
-
-          <Link
-           href="https://github.com/viekoi"
-           target="_blank"
-           rel="noreferrer"
-            className=" flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300  bg-black"
-          >
-            <div className="">
-              <Github size={16} color="white" />
-            </div>
-          </Link>
-        
+          <Badge
+            backgroundColor="#4267B2"
+            url="https://www.facebook.com/profile.php?id=100009650203975"
+            iconName="facebook"
+          />
+          <Badge
+            backgroundColor="#000"
+            url="https://github.com/viekoi"
+            iconName="github"
+          />
         </div>
       </CardFooter>
     </Card>

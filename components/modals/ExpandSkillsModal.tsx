@@ -3,41 +3,106 @@
 import React from 'react'
 import Modal from './Modal'
 import useExpandSkills from '@/hooks/useExpandSkills'
-import Skills from '../Skills';
+import Badge from '../ui/Badge'
 
-const skills = [
+
+import Html from "../../public/assets/skills/html.png";
+import Css from "../../public/assets/skills/css.png";
+import Javascript from "../../public/assets/skills/javascript.png";
+import ReactImg from "../../public/assets/skills/react.png";
+import ReactNative from "../../public/assets/skills/react-native.png";
+import Tailwind from "../../public/assets/skills/tailwind.png";
+import Github from "../../public/assets/skills/github1.png";
+import Ts from "../../public/assets/skills/typescript.png";
+import NextJS from "../../public/assets/skills/nextjs.png";
+import MongoDB from "../../public/assets/skills/mongo.png";
+import Sql from "../../public/assets/skills/sql.png";
+import Prisma from "../../public/assets/skills/prisma.png";
+import Sass from "../../public/assets/skills/sass.png";
+import Redux from '../../public/assets/skills/redux.png'
+import Zustand from '../../public/assets/skills/zustand.png'
+import Clerk from '../../public/assets/skills/clerk.png'
+import SupaBase from '../../public/assets/skills/supabase.png'
+import NextAuth from '../../public/assets/skills/nextauth.png'
+
+
+
+type extandSkill ={ 
+  title:string;
+  skills:{ name:string,imageUrl:any,url:string}[]
+
+}
+
+
+const extandSkills:extandSkill[] = [
     {
       title: "Coding Languages",
-      des: "JavaScript, Typescript",
+      skills:[
+        {
+          name: "TypeScript",
+          imageUrl: Ts,
+          url: `https://www.typescriptlang.org/docs/`,
+        },
+        {
+          name: "JavaScript",
+          imageUrl: Javascript,
+          url: `https://developer.mozilla.org/en-US/docs/Web/JavaScript`,
+        },
+      ],
     },
     {
       title: "Frameworks ",
-      des: "ReactJs, NextJs",
+      skills:[
+        { name: "Next", imageUrl: NextJS, url: `https://nextjs.org/` },
+        { name: "React", imageUrl: ReactImg, url: `https://react.dev/` },
+      ],
     },
     {
       title: "Styling",
-      des: "CSS, SASS, TAILWIND",
+      skills:[
+        {
+          name: "CSS",
+          imageUrl: Css,
+          url: `https://developer.mozilla.org/en-US/docs/Web/CSS`,
+        },
+         { name: "Tailwind", imageUrl: Tailwind, url: "https://tailwindcss.com/" },
+         { name: "Sass", imageUrl: Sass, url: "https://sass-lang.com/documentation/" },
+      ],
     },
     {
       title: "State Management",
-      des: "Redux, Zustand, React Context Api",
+      skills:[
+        { name: "Redux", imageUrl: Redux, url: "https://redux.js.org/" },
+        { name: "Zustand", imageUrl: Zustand, url: "https://docs.pmnd.rs/zustand/getting-started/introduction" },
+        { name: "React context api", imageUrl: ReactImg, url: "https://legacy.reactjs.org/docs/context.html" },
+
+      ],
     },
     {
       title: "Auth",
-      des: "Next Auth, oAuth, Clerk, SupaBase",
+      skills:[
+        { name: "Clerk", imageUrl: Clerk, url: "https://clerk.com/" },
+        { name: "SupaBase", imageUrl: SupaBase, url: "https://supabase.com/" },
+        { name: "Next Auth", imageUrl: NextAuth, url: "https://next-auth.js.org/" },
+
+      ],
     },
-    {
-      title: "Database Languages",
-      des: "NoSql, Sql",
-    },
-    {
-      title: "Ui Frameworks",
-      des: "Radix, Shadcn, Bootstrap",
-    },
-    {
-      title: "Version Control",
-      des: "Git",
-    },
+    // {
+    //   title: "Auth",
+    //   skills: "Next Auth, oAuth, Clerk, SupaBase",
+    // },
+    // {
+    //   title: "Database Languages",
+    //   skills: "NoSql, Sql",
+    // },
+    // {
+    //   title: "Ui Frameworks",
+    //   skills: "Radix, Shadcn, Bootstrap",
+    // },
+    // {
+    //   title: "Version Control",
+    //   skills: "Git",
+    // },
   ];
   
 
@@ -49,11 +114,17 @@ const ExpandSkillsModal = () => {
   return (
     <Modal isOpen={expandSkills.isOpen} onClose={expandSkills.onClose}>
           <div className="flex flex-col gap-4 mt-10">
-          {skills.map((skill, index) => {
+          {extandSkills.map((extandSkill, index) => {
             return (
               <div className="" key={index}>
-                <h4 className=" text-[14px] font-bold">{skill.title}</h4>
-                <span className=" text-[12px] font-normal">{skill.des}</span>
+                <h4 className=" text-[14px] font-bold">{extandSkill.title}</h4>
+                <div className="flex gap-2">
+                  {extandSkill.skills.map((skill,index)=>{
+                      return(
+                        <Badge imageUrl={skill.imageUrl} url={skill.url} className='w-[35px] h-[35px] '/>
+                      )
+                  })}
+                </div>
               </div>
             );
           })}

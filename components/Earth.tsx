@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Facebook, Github } from "lucide-react";
+import Badge from "./ui/Badge";
 
 const Earth = () => {
   return (
@@ -12,27 +13,16 @@ const Earth = () => {
           © 2023 Khôi Nguyễn<a href="/" className="hover:underline"></a>
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-1">
-          <Link
-            href="https://www.facebook.com/profile.php?id=100009650203975"
-            target="_blank"
-            rel="noreferrer"
-            className=" flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300  bg-[#4267B2] "
-          >
-            <div className="">
-              <Facebook size={16} color="white" />
-            </div>
-          </Link>
-
-          <Link
-            href="https://github.com/viekoi"
-            target="_blank"
-            rel="noreferrer"
-            className=" flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300  bg-black"
-          >
-            <div className="">
-              <Github size={16} color="white" />
-            </div>
-          </Link>
+          <Badge
+            backgroundColor="#4267B2"
+            url="https://www.facebook.com/profile.php?id=100009650203975"
+            name="facebook"
+          />
+          <Badge
+            backgroundColor="#000"
+            url="https://github.com/viekoi"
+            name="github"
+          />
         </div>
       </div>
     </footer>
