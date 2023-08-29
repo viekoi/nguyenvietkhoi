@@ -16,12 +16,12 @@ const Earth = () => {
           <Badge
             backgroundColor="#4267B2"
             url="https://www.facebook.com/profile.php?id=100009650203975"
-            name="facebook"
+            iconName="facebook"
           />
           <Badge
             backgroundColor="#000"
             url="https://github.com/viekoi"
-            name="github"
+            iconName="github"
           />
         </div>
       </div>
