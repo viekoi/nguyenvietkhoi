@@ -2,14 +2,14 @@ import dynamic from "next/dynamic";
 import { LucideProps } from "lucide-react";
 import dynamicIconImports from "lucide-react/dynamicIconImports";
 import Link from "next/link";
-import Image from "next/image";
+import Image,{StaticImageData} from "next/image";
 import { cn } from "@/lib/utils";
 
 interface BadgeProps extends LucideProps {
   iconName?: keyof typeof dynamicIconImports;
   url: string;
   backgroundColor?: string;
-  imageUrl?: string;
+  imageUrl?: string | StaticImageData;
   className?: string;
 }
 
@@ -29,7 +29,7 @@ const Badge = ({
         target="_blank"
         rel="noreferrer"
         className={cn(
-          " flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300"
+          " flex items-center justify-center w-[24px] h-[24px] rounded-[50%] cursor-pointer hover:scale-105 ease-in duration-300"
         )}
         style={{
           backgroundColor: `${
@@ -49,7 +49,7 @@ const Badge = ({
         target="_blank"
         rel="noreferrer"
         className={cn(
-          "rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300 relative ",
+          " shadow-lg cursor-pointer overflow-hidden rounded-[50%] hover:scale-105 ease-in duration-300 relative ",
           className
         )}
         style={{
@@ -60,10 +60,10 @@ const Badge = ({
       >
         <Image
           src={imageUrl}
-          alt={imageUrl}
+          alt="image"
           style={{ objectFit: "contain" }}
           fill
-          className="absolute"
+          className="absolute "
         />
       </Link>
     );

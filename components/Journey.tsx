@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 import Badge from "./ui/Badge";
+import Ueh from "../public/assets/journey/ueh.png";
 
 import {
   Card,
@@ -67,32 +68,21 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
                   Final year university student
                 </h3> */}
 
-                <CardDescription className=" text-blue-600 font-bold ">
+                <CardDescription className=" text-blue-600 font-bold text-[16px] ">
                   Final year student
                 </CardDescription>
 
-                <span className="capitalize font-normal text-[14px]">
-                  2021 - Present | UEH University, HCM city{" "}
-                  <span className="inline-block">
-                    {" "}
-                    {/* <Link
-                      href="https://ueh.edu.vn"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="  flex items-center justify-center w-[24px] h-[24px] rounded-[50%] shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300 bg-transparent "
-                    >
-                      <div className="">
-                        <Image
-                          src={`/assets/journey/ueh.png`}
-                          alt="ueh"
-                          width={24}
-                          height={24}
-                        />
-                      </div>
-                    </Link> */}
-                    <Badge imageUrl="/assets/journey/ueh.png" url="https://ueh.edu.vn"/>
+                <div className="flex items-center gap-1">
+                  <Badge
+                    imageUrl={Ueh}
+                    url="https://ueh.edu.vn"
+                    className="w-[24px] h-[24px]"
+                  />
+                  <span className="capitalize  text-[12px] font-semibold">
+                    2021 - Present | UEH University, HCM city{" "}
                   </span>
-                </span>
+                </div>
+
                 <p className="font-medium w-full text-[12px] opacity-[80%] ">
                   High scores in all programming and math subjects include data
                   structure and algorithms, data science, web development, and

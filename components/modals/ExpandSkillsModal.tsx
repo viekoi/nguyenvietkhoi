@@ -25,11 +25,13 @@ import Clerk from '../../public/assets/skills/clerk.png'
 import SupaBase from '../../public/assets/skills/supabase.png'
 import NextAuth from '../../public/assets/skills/nextauth.png'
 
+import { StaticImageData } from 'next/image'
+
 
 
 type extandSkill ={ 
   title:string;
-  skills:{ name:string,imageUrl:any,url:string}[]
+  skills:{ name:string,imageUrl:StaticImageData | string,url:string}[]
 
 }
 
@@ -121,7 +123,7 @@ const ExpandSkillsModal = () => {
                 <div className="flex gap-2">
                   {extandSkill.skills.map((skill,index)=>{
                       return(
-                        <Badge key={index} imageUrl={skill.imageUrl} url={skill.url} className='w-[35px] h-[35px] '/>
+                        <Badge key={index} imageUrl={skill.imageUrl} url={skill.url} className='w-[40px] h-[40px] '/>
                       )
                   })}
                 </div>
