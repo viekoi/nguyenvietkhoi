@@ -29,7 +29,7 @@ const Badge = ({
         target="_blank"
         rel="noreferrer"
         className={cn(
-          " flex items-center justify-center w-[24px] h-[24px] rounded-[50%] cursor-pointer hover:scale-105 ease-in duration-300"
+          " flex items-center justify-center w-[24px] h-[24px] shadow-sm  rounded-[50%] cursor-pointer hover:scale-105 ease-in duration-300"
         )}
         style={{
           backgroundColor: `${
@@ -49,7 +49,7 @@ const Badge = ({
         target="_blank"
         rel="noreferrer"
         className={cn(
-          " shadow-lg cursor-pointer overflow-hidden rounded-[50%] hover:scale-105 ease-in duration-300 relative ",
+          " shadow-lg cursor-pointer overflow-hidden rounded-[50%] shadow-sm hover:scale-105 ease-in duration-300 relative ",
           className
         )}
         style={{

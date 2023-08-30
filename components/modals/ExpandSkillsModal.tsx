@@ -24,6 +24,11 @@ import Zustand from '../../public/assets/skills/zustand.png'
 import Clerk from '../../public/assets/skills/clerk.png'
 import SupaBase from '../../public/assets/skills/supabase.png'
 import NextAuth from '../../public/assets/skills/nextauth.png'
+import Nosql from '../../public/assets/skills/nosql.png'
+import Radix from '../../public/assets/skills/radix.png'
+import Shadcn from '../../public/assets/skills/shadcn.png'
+import Bootstrap from '../../public/assets/skills/bootstrap.png'
+import Git from '../../public/assets/skills/git.png'
 
 import { StaticImageData } from 'next/image'
 
@@ -89,6 +94,26 @@ const extandSkills:extandSkill[] = [
 
       ],
     },
+    {
+      title: "Database Languages",
+      skills:[
+        { name: "SQL", imageUrl: Sql, url: "https://dev.mysql.com/doc/" },
+        { name: "NoSql", imageUrl:Nosql, url: "https://www.mongodb.com/document-databases" },
+      ],
+    },
+    {
+      title: "Ui Frameworks",
+      skills:[
+        { name: "Radix", imageUrl: Radix, url: "https://www.radix-ui.com/" },
+        { name: "Shadcn", imageUrl:Shadcn, url: "https://ui.shadcn.com/" },
+        { name: "Bootstrap", imageUrl:Bootstrap, url: "https://getbootstrap.com/" },
+      ],
+    },{
+      title: "Version control",
+      skills:[
+        { name: "Git", imageUrl: Git, url: "https://git-scm.com/" },
+      ]
+    },
     // {
     //   title: "Auth",
     //   skills: "Next Auth, oAuth, Clerk, SupaBase",
@@ -123,7 +148,7 @@ const ExpandSkillsModal = () => {
                 <div className="flex gap-2">
                   {extandSkill.skills.map((skill,index)=>{
                       return(
-                        <Badge key={index} imageUrl={skill.imageUrl} url={skill.url} className='w-[40px] h-[40px] '/>
+                        <Badge key={index} imageUrl={skill.imageUrl} url={skill.url} className='w-[30px] h-[30px] '/>
                       )
                   })}
                 </div>
