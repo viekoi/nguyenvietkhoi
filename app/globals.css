@@ -198,7 +198,7 @@
   box-shadow: 3em 9.3em #ffffff, -1.8em 11.2em #ffffff, 2.5em 16.2em #ffffff,
     -5em 6.2em #ffffff, -5.6em -0.6em #ffffff, -5.6em 3.7em 0 0.06em #ffffff,
     -5em 17.5em 0 0.05em #ffffff, -7.5em 14.3em #ffffff;
-  animation: twinkle 12s infinite forwards;
+  animation: twinkle 1s infinite forwards;
 }
 
 .themeBtn_stars::before {
