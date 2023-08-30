@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import Dog from "./Dog";
 import Cloud from "./Cloud";
+import Avatar from "./ui/Avatar";
 
 const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15];
 
@@ -87,14 +88,8 @@ const Sky = () => {
           />
         </div>
       </div>
-      <div className="absolute z-50 top-[95%]   -translate-y-[100%] left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center ">
-        <Image
-          src={"/assets/me.jpg"}
-          alt="me"
-          width={250}
-          height={250}
-          className=" rounded-full w-[180px] h-[180px] md:w-[200px] md:h-[200px] lg:w-[225px] lg:h-[225px] "
-        />
+      <div className="absolute z-50 top-[95%] -translate-y-[100%] left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center ">
+        <Avatar className="md:w-[200px] md:h-[200px] lg:w-[225px] lg:h-[225px]"/>
 
         <h1 className="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold text-back dark:text-white ">
           Nguyễn Việt Khôi

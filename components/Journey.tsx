@@ -72,7 +72,7 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
                   Final year student
                 </CardDescription>
 
-                <div className="flex items-center gap-1">
+                <div className="flex items-start gap-1">
                   <Badge
                     imageUrl={Ueh}
                     url="https://ueh.edu.vn"

@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Journey from "@/components/Journey";
 import Earth from "@/components/Earth";
+import Project from "@/components/Project";
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
             <Skills />
           </div>
 
-          <div className="col-span-full lg:col-span-6">
-           <Journey/>
+          <div className=" flex flex-col col-span-full lg:col-span-6 gap-y-2">
+            <Journey/>
+            <Project/>
           </div>
         </div>
       </div>
