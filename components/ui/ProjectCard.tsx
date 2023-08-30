@@ -20,7 +20,12 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ className, ...props }) => {
   return (
-    <Card className={cn("bg-white shadow-lg border-[1px] border-solid border-[#D1D5DB]", className)}>
+    <Card
+      className={cn(
+        "bg-white shadow-lg border-[1px] border-solid border-[#D1D5DB]",
+        className
+      )}
+    >
       <CardContent className=" p-[16px_0_8px_16px]">
         <div className="flex items-start gap-x-2">
           <Avatar className="w-[40px] h-[40px]" />
@@ -34,16 +39,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ className, ...props }) => {
       </CardContent>
 
       <CardContent className="p-0">
-        <Link href={`https://music-share-nu.vercel.app/`} target="_blank" >
-          <div className=" w-full h-[150px] relative">
+        <Link href={`https://music-share-nu.vercel.app/`} target="_blank">
+          <div className=" w-full h-[30vh] relative">
             <Image
               src={`/assets/projects/musicshare.png`}
-              style={{ objectFit: "cover" }}
-              className="absolute"
+              style={{ objectFit: "cover",objectPosition:"50% 0%"}}
               fill
               alt="project"
             />
           </div>
+
           <CardDescription className="p-4 bg-[#f0f2f5] font-semibold text-black">
             Music Share
           </CardDescription>
