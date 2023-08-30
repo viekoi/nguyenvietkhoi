@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ className, ...props }) => {
         <Link href={`https://music-share-nu.vercel.app/`} target="_blank" >
           <div className=" w-full h-[150px] relative">
             <Image
-              src={`/assets/projects/MusicShare.png`}
+              src={`/assets/projects/musicshare.png`}
               style={{ objectFit: "cover" }}
               className="absolute"
               fill

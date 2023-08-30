@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import ShootingStar from "./ShootingStar";
 import Star from "./Star";
@@ -12,36 +12,12 @@ import Avatar from "./ui/Avatar";
 const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15];
 
 const Sky = () => {
-  const [isThemed, setIsThemed] = useState(false);
+ 
 
   const { setTheme } = useTheme();
 
-  useEffect(() => {
-    setIsThemed(true);
-  }, []);
-
-  if (!isThemed)
-    return (
-      <div className="h-[40vh] relative ">
-        <div className="absolute z-50 top-[95%] -translate-y-[100%] left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center ">
-          <Image
-            src={"/assets/me.jpg"}
-            alt="me"
-            width={250}
-            height={250}
-            className=" rounded-full w-[180px] h-[180px] md:w-[200px] md:h-[200px] lg:w-[225px] lg:h-[225px] "
-          />
-
-          <h1 className="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold text-back dark:text-white ">
-            Nguyễn Việt Khôi
-          </h1>
-          <span className="font-semibold text-[14px] sm:text-[16px] text-[#f79e38] dark:text-stone-400">
-            Web and future Mobile dev
-          </span>
-        </div>
-      </div>
-    );
-
+ 
+  
   return (
     <div className="h-[40vh] relative ">
       <div className="h-full text-[5px] sm:text-[8px] md:text-[10px]  relative z-[1px] overflow-hidden  ">
