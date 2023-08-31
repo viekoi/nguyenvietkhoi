@@ -48,13 +48,7 @@ const Project: React.FC<ProjectProps> = ({ className, ...props }) => {
         <CardTitle>Pet Projects</CardTitle>
       </CardHeader>
       <CardContent>
-        {/* <ProjectCard
-          imageUrl="/assets/projects/musicshare.png"
-          demoUrl="https://music-share-nu.vercel.app/"
-          projectUrl="https://github.com/viekoi/MusicShare"
-          duration="June 2023 - July 2023"
-        /> */}
-        <div className="flex flex-col gap-y-2">
+        <div className="flex flex-col gap-y-8">
         {projects.map((project, index) => {
           return (
             <ProjectCard

@@ -76,12 +76,12 @@ module.exports = {
           to: { height: 0 },
         },
         "slide-in-bottom": {
-          from: { transform: 'translate(-50%,100%)' },
+          from: { transform: 'translate(-50%,100vh)' },
           to: { transform: 'translate(-50%,-50%)' },
         },
         "slide-down-top": {
           from: { transform: 'translate(-50%,-50%)' },
-          to: { transform: 'translate(-50%,100%)' },
+          to: { transform: 'translate(-50%,100vh)' },
         },
       },
       animation: {
