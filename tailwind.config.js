@@ -17,6 +17,7 @@ module.exports = {
     },
     transitionDuration: {
       3000: "3000ms",
+      300:"300ms"
     },
     extend: {
       gridTemplateColumns: {
@@ -74,10 +75,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "slide-in-bottom": {
+          from: { transform: 'translate(-50%,100%)' },
+          to: { transform: 'translate(-50%,-50%)' },
+        },
+        "slide-down-top": {
+          from: { transform: 'translate(-50%,-50%)' },
+          to: { transform: 'translate(-50%,100%)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slide-down-top":"slide-down-top 0.5s ease-out",
+        "slide-in-bottom":"slide-in-bottom 0.5s ease-out"
       },
     },
   },

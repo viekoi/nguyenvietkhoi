@@ -19,6 +19,7 @@ interface ModalProps {
   onClose: () => void;
   children?: React.ReactNode;
 }
+import { cn } from "@/lib/utils";
 
 const Modal: React.FC<ModalProps> = ({
   isOpen,
@@ -34,10 +35,11 @@ const Modal: React.FC<ModalProps> = ({
   };
 
   return (
-    <Dialog open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
+    <Dialog  open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
       <DialogContent
-        className="
-         overflow-y-auto
+        className={cn(
+          `
+        overflow-y-auto
          fixed 
          drop-shadow-md 
          border 
@@ -51,15 +53,17 @@ const Modal: React.FC<ModalProps> = ({
          w-full 
          md:w-[90vw] 
          md:max-w-[450px] 
-         translate-x-[-50%] 
-         translate-y-[-50%] 
+         translate-x-[-50%]
+         translate-y-[-50%]
          rounded-md 
          bg-[#f7f7f7]
          p-[25px] 
          focus:outline-none
          z-50
-       "
+        `
+        )}
       >
+        <div className=""></div>
         {title && (
           <DialogTitle
             className="
