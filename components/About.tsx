@@ -10,9 +10,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { GraduationCap, Home, Mail, Facebook, Github } from "lucide-react";
+import { GraduationCap, Home, Mail} from "lucide-react";
 import Link from "next/link";
-import Badge from "./ui/Badge";
+import IconBadge from "./ui/IconBadge";
 
 interface AboutProps {
   className?: string;
@@ -76,12 +76,12 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
       </CardContent>
       <CardFooter>
         <div className="flex gap-2 w-full justify-end">
-          <Badge
+          <IconBadge
             backgroundColor="#4267B2"
             url="https://www.facebook.com/profile.php?id=100009650203975"
             iconName="facebook"
           />
-          <Badge
+          <IconBadge
             backgroundColor="#000"
             url="https://github.com/viekoi"
             iconName="github"

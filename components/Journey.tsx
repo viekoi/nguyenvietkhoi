@@ -4,7 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 import Badge from "./ui/Badge";
-import Ueh from "../public/assets/journey/ueh.png";
+
 
 import {
   Card,
@@ -14,7 +14,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BadgeHelp } from "lucide-react";
+
 
 interface JourneyProps {
   className?: string;
@@ -74,7 +74,7 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
 
                 <div className="flex items-start gap-1">
                   <Badge
-                    imageUrl={Ueh}
+                    imageUrl={`ueh`}
                     url="https://ueh.edu.vn"
                     className="w-[24px] h-[24px]"
                   />

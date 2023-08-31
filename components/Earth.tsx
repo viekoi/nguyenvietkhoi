@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { Facebook, Github } from "lucide-react";
-import Badge from "./ui/Badge";
+
+import IconBadge from "./ui/IconBadge";
 
 const Earth = () => {
   return (
@@ -13,12 +12,12 @@ const Earth = () => {
           © 2023 Khôi Nguyễn<a href="/" className="hover:underline"></a>
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-1">
-          <Badge
+          <IconBadge
             backgroundColor="#4267B2"
             url="https://www.facebook.com/profile.php?id=100009650203975"
             iconName="facebook"
           />
-          <Badge
+          <IconBadge
             backgroundColor="#000"
             url="https://github.com/viekoi"
             iconName="github"

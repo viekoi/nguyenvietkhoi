@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Card
       className={cn(
-        "bg-white  border-[1px] border-solid border-stone-400",
+        "bg-white border-[1px] border-solid border-[#d2d3d5] ",
         className
       )}
     >
