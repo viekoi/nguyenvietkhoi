@@ -69,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       />
       <Card
         className={cn(
-          "bg-white border-[1px] border-solid border-[#d2d3d5] ",
+          "bg-white border-[1px] border-solid border-black/60 ",
           className
         )}
       >
@@ -86,9 +86,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </CardContent>
 
         <CardContent className="p-0 overflow-hidden border-t-[1px] border-solid border-[#D1D5DB]">
-          <Link href={demoUrl} target="_blank">
+          <Link href={demoUrl} target="_blank" >
             <div
-              className="pt-[50%] relative "
+              className="pt-[50%] relative"
               style={{
                 backgroundImage: `url(${imageUrl})`,
                 backgroundSize: "cover",
