@@ -10,7 +10,7 @@ interface AvatarProps {
 const Avatar: React.FC<AvatarProps> = ({ className }) => {
   return (
     <div className={cn(`rounded-full overflow-hidden w-[180px] h-[180px] relative`,className)}>
-      <Image src={"/assets/me.jpg"} alt="me" fill className="absolute " />
+      <Image src={"/assets/me.jpg"} alt="me" fill priority />
     </div>
   );
 };

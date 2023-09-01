@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
@@ -27,16 +28,19 @@ import Shadcn from "../../public/assets/skills/shadcn.png";
 import Bootstrap from "../../public/assets/skills/bootstrap.png";
 import Git from "../../public/assets/skills/git.png";
 import Ueh from "../../public/assets/journey/ueh.png"
-import React from "react";
+import Planetscale from "../../public/assets/skills/planetscale.png"
+import Firebase  from "../../public/assets/skills/firebase.png"
+
+
+
 
 
 export type imageUrlVariants={
-  imageUrl:
+  variant:
   | "html"
   | "css"
   | "js"
   | "react"
-  | "reactnt"
   | "tailwind"
   | "github"
   | "ts"
@@ -55,56 +59,132 @@ export type imageUrlVariants={
   | "shadcn"
   | "bootstrap"
   | "git"
-  | 'ueh';
+  | 'ueh'
+  | 'planetscale'
+  | 'firebase'
 }
 
 export interface BadgeProps extends imageUrlVariants {
-  url: string;
   backgroundColor?: string;
   className?: string;
 }
 
-const colorVariantList: Record<BadgeProps["imageUrl"], StaticImageData> = {
-  html: Html,
-  css: Css,
-  js: Javascript,
-  react: ReactImg,
-  reactnt: ReactNative,
-  tailwind: Tailwind,
-  github: Github,
-  ts: Ts,
-  next: NextJS,
-  mgdb: MongoDB,
-  sql: Sql,
-  prisma: Prisma,
-  sass: Sass,
-  redux: Redux,
-  zustand: Zustand,
-  clerk: Clerk,
-  supa: SupaBase,
-  nextauth: NextAuth,
-  nosql: Nosql,
-  radix: Radix,
-  shadcn: Shadcn,
-  bootstrap: Bootstrap,
-  git: Git,
-  ueh:Ueh
+
+const variantList: Record<BadgeProps["variant"], {imageUrl:StaticImageData,url:string}> = {
+  html:{
+    imageUrl:Html,
+    url:`https://developer.mozilla.org/en-US/docs/Web/CSS`
+  },
+  css:{
+    imageUrl:Css,
+    url:'https://developer.mozilla.org/en-US/docs/Web/CSS'
+  },
+  js:{
+    imageUrl:Javascript,
+    url:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  react:{
+    imageUrl:ReactImg,
+    url:"https://react.dev/"
+  },
+  tailwind:{
+    imageUrl:Tailwind,
+    url:"https://tailwindcss.com/"
+  },
+  github:{
+    imageUrl:Github,
+    url:"https://github.com/"
+  },
+  ts:{
+    imageUrl:Ts,
+    url:'https://www.typescriptlang.org/docs/'
+  },
+  next:{
+    imageUrl: NextJS, 
+    url: `https://nextjs.org/`
+  },
+  mgdb:{
+    imageUrl: MongoDB, url: `https://mongodb.com/` 
+  },
+  sql:{
+    imageUrl: Sql, url: `https://dev.mysql.com/doc/`
+  },
+  prisma:{
+    imageUrl:Prisma,
+    url:"https://www.prisma.io/"
+  },
+  sass:{
+    imageUrl:Sass,
+    url:"https://sass-lang.com/"
+  },
+  redux:{
+    imageUrl:Redux,
+    url:"https://redux.js.org/"
+  },
+  zustand:{
+    imageUrl:Zustand,
+    url:"https://docs.pmnd.rs/zustand/getting-started/introduction"
+  },
+  clerk:{
+    imageUrl:Clerk,
+    url:"https://clerk.com/"
+  },
+  supa:{
+    imageUrl:SupaBase,
+    url:'https://supabase.com/'
+  },
+  nextauth:{
+    imageUrl:NextAuth,
+    url:`https://next-auth.js.org/`
+  },
+  nosql:{
+    imageUrl:Nosql,
+    url:`https://www.mongodb.com/document-databases`
+  },
+  radix: {
+    imageUrl: Radix, url: "https://www.radix-ui.com/"
+  },
+  shadcn:{
+    imageUrl: Shadcn, url: "https://ui.shadcn.com/"
+  },
+  bootstrap:{
+    imageUrl: Bootstrap,
+        url: "https://getbootstrap.com/",
+  },
+  git: {
+    imageUrl: Git, url: "https://git-scm.com/"
+  },
+  planetscale:{
+    imageUrl:Planetscale,
+    url:"https://planetscale.com/"
+  },
+  ueh:{
+    imageUrl:Ueh,
+    url:"https://www.ueh.edu.vn/"
+  },
+  firebase:{
+    imageUrl:Firebase,
+    url:"https://firebase.google.com/"
+  }
 };
 
+
+
+
+
 const Badge:React.FC<BadgeProps> = ({
-  url,
   backgroundColor,
-  imageUrl,
+  variant,
   className,
   ...props
 }) => {
   return (
     <Link
-      href={url}
+      href={variantList[`${variant}`].url}
       target="_blank"
       rel="noreferrer"
       className={cn(
-        " cursor-pointer overflow-hidden rounded-[50%] shadow-sm hover:scale-105 ease-in duration-300 relative ",
+        " cursor-pointer overflow-hidden rounded-[50%]  hover:scale-105 ease-in duration-300 relative ",
         className
       )}
       style={{
@@ -112,7 +192,7 @@ const Badge:React.FC<BadgeProps> = ({
       }}
     >
       <Image
-        src={colorVariantList[`${imageUrl}`]}
+        src={variantList[`${variant}`].imageUrl}
         alt="image"
         style={{ objectFit: "contain" }}
         fill

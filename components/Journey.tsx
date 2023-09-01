@@ -74,8 +74,7 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
 
                 <div className="flex items-start gap-1">
                   <Badge
-                    imageUrl={`ueh`}
-                    url="https://ueh.edu.vn"
+                    variant={`ueh`}
                     className="w-[24px] h-[24px]"
                   />
                   <span className="capitalize  text-[12px] font-semibold">

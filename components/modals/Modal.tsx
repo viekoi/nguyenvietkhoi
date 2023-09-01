@@ -35,42 +35,45 @@ const Modal: React.FC<ModalProps> = ({
   };
 
   return (
-    <Dialog  open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
+    <Dialog open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
       <DialogContent
         className={cn(
           `
         overflow-y-auto
-         fixed 
-         drop-shadow-md 
-         border 
-         border-neutral-700 
-         top-[50%] 
-         left-[50%] 
-         max-h-full 
-         h-full 
-         md:h-auto 
-         md:max-h-[85vh] 
-         w-full 
-         md:w-[90vw] 
-         md:max-w-[450px] 
-         translate-x-[-50%]
-         translate-y-[-50%]
-         rounded-md 
-         bg-[#f7f7f7]
-         p-[25px] 
-         focus:outline-none
-         z-50
+        fixed 
+        drop-shadow-md 
+        border 
+        border-neutral-700 
+        top-[50%] 
+        left-[50%] 
+        max-h-full 
+        h-full 
+        md:h-auto 
+        md:max-h-[85vh] 
+        w-full 
+        md:w-[90vw] 
+        md:max-w-[450px] 
+        translate-x-[-50%]
+        translate-y-[-50%]
+        rounded-md 
+        bg-[#f7f7f7]
+        p-[25px] 
+        focus:outline-none
+        z-50
         `
         )}
       >
-        <div className=""></div>
         {title && (
           <DialogTitle
             className="
               text-xl 
               text-center 
               font-bold 
-              mb-4"
+              pb-4
+              border-b-[1px]
+              border-solid
+              border-[#D1D5DB]
+              "
           >
             {title}
           </DialogTitle>

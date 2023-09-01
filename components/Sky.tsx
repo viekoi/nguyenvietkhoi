@@ -65,7 +65,7 @@ const Sky = () => {
         </div>
       </div>
       <div className="absolute z-50 top-[95%] -translate-y-[100%] left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center ">
-        <Avatar className="md:w-[200px] md:h-[200px] lg:w-[225px] lg:h-[225px]"/>
+        <Avatar/>
 
         <h1 className="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold text-back dark:text-white ">
           Nguyễn Việt Khôi

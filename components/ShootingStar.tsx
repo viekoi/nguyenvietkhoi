@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React  from "react";
 import { cn } from "@/lib/utils";
 
 interface ShootingStarProps {
@@ -7,9 +7,9 @@ interface ShootingStarProps {
 }
 
 const ShootingStar: React.FC<ShootingStarProps> = ({ index }) => {
-  const [delay, setDelay] = useState(Math.random() * 10);
-  const [duration, setDuration] = useState(Math.random() * 4 + 6);
-  const [top, setTop] = useState(Math.random() * 50);
+  const delay = (Math.random() * 10);
+  const duration = (Math.random() * 4 + 6);
+  const top =(Math.random() * 50);
 
   return (
     <div

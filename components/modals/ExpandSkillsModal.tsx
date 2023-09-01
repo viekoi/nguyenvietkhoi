@@ -8,7 +8,7 @@ import { imageUrlVariants } from "../ui/Badge";
 
 type extandSkill = {
   title: string;
-  skills: ({ name: string; url: string } & imageUrlVariants)[];
+  skills: ({ name: string } & imageUrlVariants)[];
 };
 
 const extandSkills: extandSkill[] = [
@@ -17,21 +17,19 @@ const extandSkills: extandSkill[] = [
     skills: [
       {
         name: "TypeScript",
-        imageUrl: "ts",
-        url: `https://www.typescriptlang.org/docs/`,
+        variant: "ts",
       },
       {
         name: "JavaScript",
-        imageUrl: "js",
-        url: `https://developer.mozilla.org/en-US/docs/Web/JavaScript`,
+        variant: "js",
       },
     ],
   },
   {
     title: "Frameworks ",
     skills: [
-      { name: "Next", imageUrl: "next", url: `https://nextjs.org/` },
-      { name: "React", imageUrl: "react", url: `https://react.dev/` },
+      { name: "Next", variant: "next" },
+      { name: "React", variant: "react" },
     ],
   },
   {
@@ -39,77 +37,68 @@ const extandSkills: extandSkill[] = [
     skills: [
       {
         name: "CSS",
-        imageUrl: "css",
-        url: `https://developer.mozilla.org/en-US/docs/Web/CSS`,
+        variant: "css",
       },
       {
         name: "Tailwind",
-        imageUrl: "tailwind",
-        url: "https://tailwindcss.com/",
+        variant: "tailwind",
       },
       {
         name: "Sass",
-        imageUrl: "sass",
-        url: "https://sass-lang.com/documentation/",
+        variant: "sass",
       },
     ],
   },
   {
     title: "State Management",
     skills: [
-      { name: "Redux", imageUrl: "redux", url: "https://redux.js.org/" },
+      { name: "Redux", variant: "redux" },
       {
         name: "Zustand",
-        imageUrl: "zustand",
-        url: "https://docs.pmnd.rs/zustand/getting-started/introduction",
+        variant: "zustand",
       },
       {
         name: "React context api",
-        imageUrl: "react",
-        url: "https://legacy.reactjs.org/docs/context.html",
+        variant: "react",
       },
     ],
   },
   {
     title: "Auth",
     skills: [
-      { name: "Clerk", imageUrl: "clerk", url: "https://clerk.com/" },
-      { name: "SupaBase", imageUrl: "supa", url: "https://supabase.com/" },
+      { name: "Clerk", variant: "clerk" },
+      { name: "SupaBase", variant: "supa" },
       {
         name: "Next Auth",
-        imageUrl: "nextauth",
-        url: "https://next-auth.js.org/",
+        variant: "nextauth",
       },
     ],
   },
   {
     title: "Database Languages",
     skills: [
-      { name: "SQL", imageUrl: "sql", url: "https://dev.mysql.com/doc/" },
+      { name: "SQL", variant: "sql" },
       {
         name: "NoSql",
-        imageUrl: "nosql",
-        url: "https://www.mongodb.com/document-databases",
+        variant: "nosql",
       },
     ],
   },
   {
     title: "Ui Frameworks",
     skills: [
-      { name: "Radix", imageUrl: "radix", url: "https://www.radix-ui.com/" },
-      { name: "Shadcn", imageUrl: "shadcn", url: "https://ui.shadcn.com/" },
+      { name: "Radix", variant: "radix" },
+      { name: "Shadcn", variant: "shadcn" },
       {
         name: "Bootstrap",
-        imageUrl: "bootstrap",
-        url: "https://getbootstrap.com/",
+        variant: "bootstrap",
       },
     ],
   },
   {
     title: "Version control",
-    skills: [{ name: "Git", imageUrl: "git", url: "https://git-scm.com/" }],
+    skills: [{ name: "Git", variant: "git" }],
   },
-  
 ];
 
 const ExpandSkillsModal = () => {
@@ -117,7 +106,7 @@ const ExpandSkillsModal = () => {
 
   return (
     <Modal isOpen={expandSkills.isOpen} onClose={expandSkills.onClose}>
-      <div className="flex flex-col gap-4 mt-10">
+      <div className="flex flex-col gap-4">
         {extandSkills.map((extandSkill, index) => {
           return (
             <div className="" key={index}>
@@ -127,8 +116,7 @@ const ExpandSkillsModal = () => {
                   return (
                     <Badge
                       key={index}
-                      imageUrl={skill.imageUrl}
-                      url={skill.url}
+                      variant={skill.variant}
                       className="w-[30px] h-[30px] "
                     />
                   );
