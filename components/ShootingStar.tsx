@@ -8,7 +8,7 @@ interface ShootingStarProps {
 
 const ShootingStar: React.FC<ShootingStarProps> = ({ index }) => {
   const delay = (Math.random() * 10);
-  const duration = (Math.random() * 15 + 5);
+  const duration = (Math.random() * 10 + 10);
   const top =(Math.random() * 50);
 
   return (
