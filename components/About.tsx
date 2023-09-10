@@ -14,6 +14,8 @@ import { GraduationCap, Home, Mail} from "lucide-react";
 import Link from "next/link";
 import IconBadge from "./ui/IconBadge";
 
+import FullSizeBtn from "./ui/FullSizeBtn";
+
 interface AboutProps {
   className?: string;
 }
@@ -72,10 +74,14 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
               </Link>
             </div>
           </div>
+        <FullSizeBtn className="">
+          <Link href={'/assets/resume.pdf'}  target="_blank">My Resume</Link>
+        </FullSizeBtn>
         </div>
       </CardContent>
       <CardFooter>
-        <div className="flex gap-2 w-full justify-end">
+        
+        <div className="flex w-full gap-2 justify-end">
           <IconBadge
             backgroundColor="#4267B2"
             url="https://www.facebook.com/profile.php?id=100009650203975"
@@ -87,6 +93,7 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
             iconName="github"
           />
         </div>
+       
       </CardFooter>
     </Card>
   );
