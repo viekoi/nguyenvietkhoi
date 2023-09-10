@@ -74,9 +74,11 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
               </Link>
             </div>
           </div>
-        <FullSizeBtn className="">
-          <Link href={'/assets/resume.pdf'}  target="_blank">My Resume</Link>
-        </FullSizeBtn>
+          <Link href={'/assets/resume.pdf'}  target="_blank">
+            <FullSizeBtn className="">
+              My Resume
+            </FullSizeBtn>   
+          </Link>
         </div>
       </CardContent>
       <CardFooter>
