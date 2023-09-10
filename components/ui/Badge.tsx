@@ -65,7 +65,6 @@ export type imageUrlVariants={
 }
 
 export interface BadgeProps extends imageUrlVariants {
-  backgroundColor?: string;
   className?: string;
 }
 
@@ -173,7 +172,6 @@ const variantList: Record<BadgeProps["variant"], {imageUrl:StaticImageData,url:s
 
 
 const Badge:React.FC<BadgeProps> = ({
-  backgroundColor,
   variant,
   className,
   ...props
@@ -184,19 +182,16 @@ const Badge:React.FC<BadgeProps> = ({
       target="_blank"
       rel="noreferrer"
       className={cn(
-        " cursor-pointer overflow-hidden rounded-[50%]  hover:scale-105 ease-in duration-300 relative ",
+        " cursor-pointer overflow-hidden rounded-[50%]  relative ",
         className
       )}
-      style={{
-        backgroundColor: `${backgroundColor ? backgroundColor : `transparent`}`,
-      }}
     >
       <Image
         src={variantList[`${variant}`].imageUrl}
         alt="image"
-        style={{ objectFit: "contain" }}
+        style={{ objectFit: "contain"}}
         fill
-        className="absolute "
+        className="absolute hover:opacity-50 bg-neutral-200"
       />
     </Link>
   );
