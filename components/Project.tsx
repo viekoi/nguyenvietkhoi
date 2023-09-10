@@ -37,7 +37,7 @@ const projects: Project[] = [
     projectUrl: "https://github.com/viekoi/heicha-admin-demo",
     duration: "Jul 2023 - Present",
     descipttion:
-      "A full-stack admin page for Trà Tinh Tế Ecomerce to create, sell listings, and manage products and sales",
+      "a web application that e-commerce store owners use to oversee and manage their inventory, sales, and customer purchases.",
     type: "Personal",
     stacks: {
       frontend: ["next", `react`,`shadcn`,`zustand`,`tailwind`,`clerk`],
@@ -53,7 +53,7 @@ const projects: Project[] = [
     duration: "Jun 2023 - Jul 2023",
     type: "Personal",
     descipttion:
-      "A full-stack music sharing website for me and my friends to share our music",
+      "A website that allows users to submit and listen to a variety of songs, either from their own or others",
     stacks: {
       frontend: ["next", `react`,`radix`,`zustand`,`tailwind`,`supa`],
       backend: ["supa",'next'],
