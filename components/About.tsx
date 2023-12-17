@@ -74,7 +74,7 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
               </Link>
             </div>
           </div>
-          <Link href={'/assets/resume.pdf'}  target="_blank">
+          <Link href={'/assets/NguyenVietKhoi.pdf'}  target="_blank">
             <FullSizeBtn className="">
               My Resume
             </FullSizeBtn>   

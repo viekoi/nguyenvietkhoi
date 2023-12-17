@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import ShootingStar from "./ShootingStar";
 import Star from "./Star";
 import { useTheme } from "next-themes";
@@ -72,7 +71,7 @@ const Sky = () => {
           Nguyễn Việt Khôi
         </h1>
         <span className="font-semibold text-[14px] sm:text-[16px] text-[#f79e38] dark:text-stone-400">
-          Web and future Mobile dev
+          Web dev form Viet Nam
         </span>
        
       </div>

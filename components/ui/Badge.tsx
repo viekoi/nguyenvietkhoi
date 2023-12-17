@@ -30,6 +30,7 @@ import Git from "../../public/assets/skills/git.png";
 import Ueh from "../../public/assets/journey/ueh.png"
 import Planetscale from "../../public/assets/skills/planetscale.png"
 import Firebase  from "../../public/assets/skills/firebase.png"
+import TMA from "../../public/assets/journey/tma.png"
 
 
 
@@ -62,6 +63,7 @@ export type imageUrlVariants={
   | 'ueh'
   | 'planetscale'
   | 'firebase'
+  | 'tma'
 }
 
 export interface BadgeProps extends imageUrlVariants {
@@ -164,6 +166,10 @@ const variantList: Record<BadgeProps["variant"], {imageUrl:StaticImageData,url:s
   firebase:{
     imageUrl:Firebase,
     url:"https://firebase.google.com/"
+  },
+  tma:{
+    imageUrl:TMA,
+    url:"https://www.tmasolutions.vn/"
   }
 };
 
