@@ -71,7 +71,7 @@ const Sky = () => {
           Nguyễn Việt Khôi
         </h1>
         <span className="font-semibold text-[14px] sm:text-[16px] text-[#f79e38] dark:text-stone-400">
-          Web dev form Viet Nam
+          Web dev from Viet Nam
         </span>
        
       </div>

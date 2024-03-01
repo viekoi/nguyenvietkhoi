@@ -31,6 +31,8 @@ import Ueh from "../../public/assets/journey/ueh.png"
 import Planetscale from "../../public/assets/skills/planetscale.png"
 import Firebase  from "../../public/assets/skills/firebase.png"
 import TMA from "../../public/assets/journey/tma.png"
+import NEON from "../../public/assets/skills/neon.svg"
+
 
 
 
@@ -64,6 +66,7 @@ export type imageUrlVariants={
   | 'planetscale'
   | 'firebase'
   | 'tma'
+  | "neon"
 }
 
 export interface BadgeProps extends imageUrlVariants {
@@ -170,6 +173,10 @@ const variantList: Record<BadgeProps["variant"], {imageUrl:StaticImageData,url:s
   tma:{
     imageUrl:TMA,
     url:"https://www.tmasolutions.vn/"
+  },
+  neon:{
+    imageUrl:NEON,
+    url:"https://neon.tech/"
   }
 };
 

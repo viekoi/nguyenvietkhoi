@@ -31,18 +31,17 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Trà Tinh Tế Admin Dashboard",
-    imageUrl: "/assets/projects/tratinhteadmin.png",
-    demoUrl: "https://heicha-admin-demo.vercel.app/",
-    projectUrl: "https://github.com/viekoi/heicha-admin-demo",
-    duration: "Jul 2023 - Present",
-    descipttion:
-      "a web application that e-commerce store owners use to oversee and manage their inventory, sales, and customer purchases.",
+    title: "Postastic",
+    imageUrl: "/assets/projects/postastic.png",
+    demoUrl: "https://postastic.vercel.app/",
+    projectUrl: "https://github.com/viekoi/Postastic",
+    duration: "Jan 2024 - Current",
     type: "Personal",
+    descipttion: "Twitter Clone",
     stacks: {
-      frontend: ["next", `react`,`shadcn`,`zustand`,`tailwind`,`clerk`],
-      backend: [`next`,`prisma`],
-      database: ["sql",'planetscale'],
+      frontend: ["next", `react`, `radix`, `zustand`, `tailwind`],
+      backend: ["neon", "next"],
+      database: ["sql"],
     },
   },
   {
@@ -50,29 +49,14 @@ const projects: Project[] = [
     imageUrl: "/assets/projects/musicshare.png",
     demoUrl: "https://music-share-nu.vercel.app/",
     projectUrl: "https://github.com/viekoi/MusicShare",
-    duration: "Jun 2023 - Jul 2023",
+    duration: "Jul 2023 - Jul 2023",
     type: "Personal",
     descipttion:
       "A website that allows users to submit and listen to a variety of songs, either from their own or others",
     stacks: {
-      frontend: ["next", `react`,`radix`,`zustand`,`tailwind`,`supa`],
-      backend: ["supa",'next'],
-      database: ["sql",'supa'],
-    },
-  },
-  {
-    title: "Trà Tinh Tế Ecomerce",
-    imageUrl: "/assets/projects/tratinhte.png",
-    demoUrl: "https://heicha-97b11.web.app/",
-    projectUrl: "https://github.com/viekoi/tratinhte",
-    duration: "Jan 2023 - Apr 2023",
-    descipttion:
-      "A full-stack e-commerce website for my friend's coffee shop, named Heicha Trà tinh tế",
-    type: "Personal",
-    stacks: {
-      frontend: ["react",],
-      backend: ["mgdb",`firebase`],
-      database: ["mgdb",'firebase'],
+      frontend: ["next", `react`, `radix`, `zustand`, `tailwind`, `supa`],
+      backend: ["supa", "next"],
+      database: ["sql", "supa"],
     },
   },
 ];

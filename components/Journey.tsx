@@ -69,7 +69,7 @@ const Journey: React.FC<JourneyProps> = ({ className }) => {
                 <div className="flex items-start gap-1">
                   <Badge variant={`tma`} className="w-[24px] h-[24px]" />
                   <span className="capitalize  text-[12px] font-semibold">
-                    2023 - Present | TMA Solutions, HCM city{" "}
+                    10/2023 - 02/2024 | TMA Solutions, HCM city{" "}
                   </span>
                 </div>
 
