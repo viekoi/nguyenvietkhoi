@@ -61,6 +61,10 @@ const extandSkills: extandSkill[] = [
         name: "React context api",
         variant: "react",
       },
+      {
+        name: "Tansatack",
+        variant: "tanstack",
+      },
     ],
   },
   {
@@ -81,6 +85,16 @@ const extandSkills: extandSkill[] = [
       {
         name: "NoSql",
         variant: "nosql",
+      },
+    ],
+  },
+  {
+    title: "Database ORM",
+    skills: [
+      { name: "Prisma", variant: "prisma" },
+      {
+        name: "Drizzle",
+        variant: "drizzle",
       },
     ],
   },

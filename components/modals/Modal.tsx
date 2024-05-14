@@ -41,7 +41,6 @@ const Modal: React.FC<ModalProps> = ({
           `
         overflow-y-auto
         fixed 
-        drop-shadow-md 
         border 
         border-neutral-700 
         top-[50%] 

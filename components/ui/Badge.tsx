@@ -32,6 +32,10 @@ import Planetscale from "../../public/assets/skills/planetscale.png"
 import Firebase  from "../../public/assets/skills/firebase.png"
 import TMA from "../../public/assets/journey/tma.png"
 import NEON from "../../public/assets/skills/neon.svg"
+import TANSTACK from "../../public/assets/skills/tanstack.png"
+import DRIZZLE from "../../public/assets/skills/drizzle.png"
+
+
 
 
 
@@ -67,6 +71,8 @@ export type imageUrlVariants={
   | 'firebase'
   | 'tma'
   | "neon"
+  | "tanstack"
+  | "drizzle"
 }
 
 export interface BadgeProps extends imageUrlVariants {
@@ -116,6 +122,10 @@ const variantList: Record<BadgeProps["variant"], {imageUrl:StaticImageData,url:s
   prisma:{
     imageUrl:Prisma,
     url:"https://www.prisma.io/"
+  },
+  drizzle:{
+    imageUrl:DRIZZLE,
+    url:"https://orm.drizzle.team/"
   },
   sass:{
     imageUrl:Sass,
@@ -177,6 +187,10 @@ const variantList: Record<BadgeProps["variant"], {imageUrl:StaticImageData,url:s
   neon:{
     imageUrl:NEON,
     url:"https://neon.tech/"
+  },
+  tanstack:{
+    imageUrl:TANSTACK,
+    url:"https://tanstack.com/"
   }
 };
 
