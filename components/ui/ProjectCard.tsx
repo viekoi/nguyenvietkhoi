@@ -1,22 +1,16 @@
 "use client";
-import React, { useState } from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  CardDescription
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { Globe } from "lucide-react";
-import Avatar from "./Avatar";
-import Image from "next/image";
+import { Airplay, Code, FileText, Globe } from "lucide-react";
 import Link from "next/link";
-import { Code, FileText, Airplay } from "lucide-react";
+import React, { useState } from "react";
 import ProjectDetailModal from "../modals/ProjectDetailModal";
-import { imageUrlVariants } from "../ui/Badge";
-import { ValueOf } from "next/dist/shared/lib/constants";
+import { TImageUrlVariants } from "../ui/Badge";
+import Avatar from "./Avatar";
 
 interface ProjectCardProps {
   className?: string;
@@ -28,9 +22,9 @@ interface ProjectCardProps {
   title: string;
   type: string;
   stacks: {
-    frontend: (imageUrlVariants[`variant`])[];
-    backend: (imageUrlVariants[`variant`])[];
-    database: (imageUrlVariants[`variant`])[];
+    frontend: (TImageUrlVariants[`variant`])[];
+    backend: (TImageUrlVariants[`variant`])[];
+    database: (TImageUrlVariants[`variant`])[];
   };
 }
 
@@ -44,7 +38,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   type,
   description,
   stacks,
-
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);

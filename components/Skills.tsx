@@ -1,44 +1,54 @@
 "use client";
 
-import Html from "../public/assets/skills/html.png";
 import Css from "../public/assets/skills/css.png";
-import Javascript from "../public/assets/skills/javascript.png";
-import ReactImg from "../public/assets/skills/react.png";
-import ReactNative from "../public/assets/skills/react-native.png";
-import Tailwind from "../public/assets/skills/tailwind.png";
 import Github from "../public/assets/skills/github1.png";
-import Ts from "../public/assets/skills/typescript.png";
-import NextJS from "../public/assets/skills/nextjs.png";
+import Html from "../public/assets/skills/html.png";
+import Javascript from "../public/assets/skills/javascript.png";
 import MongoDB from "../public/assets/skills/mongo.png";
-import Sql from "../public/assets/skills/sql.png";
+import NextJS from "../public/assets/skills/nextjs.png";
 import Prisma from "../public/assets/skills/prisma.png";
+import ReactNative from "../public/assets/skills/react-native.png";
+import ReactImg from "../public/assets/skills/react.png";
+import Sql from "../public/assets/skills/sql.png";
+import Tailwind from "../public/assets/skills/tailwind.png";
+import Ts from "../public/assets/skills/typescript.png";
+import Aws from "../public/assets/skills/aws.png"
+import Gcp from "../public/assets/skills/gcp.png"
 
-import React, { use } from "react";
-import Image from "next/image";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-import FullSizeBtn from "./ui/FullSizeBtn";
 import useExpandSkills from "@/hooks/useExpandSkills";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import FullSizeBtn from "./ui/FullSizeBtn";
 
 interface SKillsProps {
   className?: string;
 }
 
 const skills = [
+  {
+    skill: "AWS",
+    imageUrl:Aws,
+    url:"https://aws.amazon.com"
+  },
+  {
+    skill: "GCP",
+    imageUrl:Gcp,
+    url:"https://cloud.google.com"
+  },
   {
     skill: "HTML",
     imageUrl: Html,

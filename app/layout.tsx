@@ -1,9 +1,8 @@
-import "./globals.css";
-import NextThemeProvider from "./../providers/theme-provider";
 import ModalProvider from "@/providers/ModalProvider";
+import NextThemeProvider from "./../providers/theme-provider";
+import "./globals.css";
 
 import { Inter } from "next/font/google";
-
 
 const inter = Inter({ subsets: ["latin"] });
 

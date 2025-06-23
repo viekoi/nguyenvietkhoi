@@ -1,12 +1,8 @@
-import dynamic from "next/dynamic";
+import { cn } from "@/lib/utils";
 import { LucideProps } from "lucide-react";
 import dynamicIconImports from "lucide-react/dynamicIconImports";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-
-
-
 
 interface IconBadgeProps extends LucideProps {
   iconName: keyof typeof dynamicIconImports;
@@ -14,8 +10,6 @@ interface IconBadgeProps extends LucideProps {
   backgroundColor?: string;
   className?: string;
 }
-
-
 
 const IconBadge = ({
   iconName,
@@ -45,7 +39,6 @@ const IconBadge = ({
         </div>
       </Link>
     );
-  
 };
 
 export default IconBadge;

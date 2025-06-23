@@ -1,9 +1,9 @@
-import Sky from "@/components/Sky";
 import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Journey from "@/components/Journey";
 import Earth from "@/components/Earth";
+import Journey from "@/components/Journey";
 import Project from "@/components/Project";
+import Skills from "@/components/Skills";
+import Sky from "@/components/Sky";
 
 export default function Home() {
   return (
@@ -17,7 +17,6 @@ export default function Home() {
               <Skills />
             </div>
           </div>
-
           <div className=" flex flex-col col-span-full lg:col-span-6 gap-y-2">
             <Journey />
             <Project />

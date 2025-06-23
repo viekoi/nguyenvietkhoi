@@ -8,16 +8,10 @@ import Dog from "./Dog";
 import Cloud from "./Cloud";
 import Avatar from "./ui/Avatar";
 
-
 const stars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15];
 
 const Sky = () => {
- 
-
   const { setTheme } = useTheme();
-
- 
-  
   return (
     <div className="h-[300px] md:h-[350px] relative ">
       <div className="h-full text-[5px] sm:text-[6px] lg:text-[8px]  relative z-[1px] overflow-hidden  ">
@@ -28,7 +22,6 @@ const Sky = () => {
           <Cloud className="top-[15%] left-[80%] absolute" />
           <Dog />
         </div>
-
         <div className="hidden dark:block">
           <Star className="left-[20%]" />
           <Star className="left-[40%]" />
@@ -38,7 +31,6 @@ const Sky = () => {
             return <ShootingStar index={index} key={index} />;
           })}
         </div>
-
         <div
           className={cn(
             "h-full w-full absolute top-1/2 transition-transform duration-3000 rounded-[50%]",
@@ -66,14 +58,12 @@ const Sky = () => {
       </div>
       <div className="absolute z-50 top-[95%] -translate-y-[100%] left-[50%] -translate-x-1/2 flex items-center flex-col justify-center text-center ">
         <Avatar className="w-[150px] h-[150px] md:w-[180px] md:h-[180px]"/>
-
         <h1 className="text-[20px] sm:text-[24px] lg:text-[32px] font-semibold text-back dark:text-white ">
           Nguyễn Việt Khôi
         </h1>
         <span className="font-semibold text-[14px] sm:text-[16px] text-[#f79e38] dark:text-stone-400">
-          Web dev from Viet Nam
+          Cloud Enginner From Viet Nam
         </span>
-       
       </div>
     </div>
   );

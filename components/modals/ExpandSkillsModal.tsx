@@ -4,14 +4,14 @@ import React from "react";
 import Modal from "./Modal";
 import useExpandSkills from "@/hooks/useExpandSkills";
 import Badge from "../ui/Badge";
-import { imageUrlVariants } from "../ui/Badge";
+import { TImageUrlVariants } from "../ui/Badge";
 
-type extandSkill = {
+type TExtandSkill = {
   title: string;
-  skills: ({ name: string } & imageUrlVariants)[];
+  skills: ({ name: string } & TImageUrlVariants)[];
 };
 
-const extandSkills: extandSkill[] = [
+const extandSkills: TExtandSkill[] = [
   {
     title: "Coding Languages",
     skills: [

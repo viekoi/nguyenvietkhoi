@@ -1,35 +1,32 @@
 "use client";
 
-import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import React from "react";
+import { TImageUrlVariants } from "./ui/Badge";
 import ProjectCard from "./ui/ProjectCard";
-import { imageUrlVariants } from "./ui/Badge";
-import { ValueOf } from "next/dist/shared/lib/constants";
 
-type Project = {
+type TProject = {
   title: string;
   imageUrl: string;
   demoUrl: string;
   projectUrl: string;
   duration: string;
   type: string;
-  descipttion: string;
+  description: string;
   stacks: {
-    frontend: imageUrlVariants[`variant`][];
-    backend: imageUrlVariants[`variant`][];
-    database: imageUrlVariants[`variant`][];
+    frontend: TImageUrlVariants[`variant`][];
+    backend: TImageUrlVariants[`variant`][];
+    database: TImageUrlVariants[`variant`][];
   };
 };
 
-const projects: Project[] = [
+const projects: TProject[] = [
   {
     title: "Postastic",
     imageUrl: "/assets/projects/postastic.png",
@@ -37,7 +34,7 @@ const projects: Project[] = [
     projectUrl: "https://github.com/viekoi/Postastic",
     duration: "Feb 2024 - Apr 2024",
     type: "Personal",
-    descipttion: "A Social media web application that allows user to create and interact with posts, user can also follow other users and interact with their posts",
+    description: "A Social media web application that allows user to create and interact with posts, user can also follow other users and interact with their posts",
     stacks: {
       frontend: ["next", `react`, `radix`, `zustand`, `tailwind`,`tanstack`],
       backend: ["neon", "next",`drizzle`],
@@ -51,7 +48,7 @@ const projects: Project[] = [
     projectUrl: "https://github.com/viekoi/MusicShare",
     duration: "Jul 2023 - Jul 2023",
     type: "Personal",
-    descipttion:
+    description:
       "A website that allows users to submit and listen to a variety of songs, either from their own or others",
     stacks: {
       frontend: ["next", `react`, `radix`, `zustand`, `tailwind`, `supa`],
@@ -84,7 +81,7 @@ const Project: React.FC<ProjectProps> = ({ className, ...props }) => {
                 projectUrl={project.projectUrl}
                 duration={project.duration}
                 stacks={project.stacks}
-                description={project.descipttion}
+                description={project.description}
               />
             );
           })}

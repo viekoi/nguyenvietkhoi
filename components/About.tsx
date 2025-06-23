@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   Card,
   CardContent,
@@ -10,8 +9,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { GraduationCap, Home, Mail} from "lucide-react";
+import { GraduationCap, Home, Mail } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 import IconBadge from "./ui/IconBadge";
 
 import FullSizeBtn from "./ui/FullSizeBtn";
@@ -26,8 +26,7 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
       <CardHeader>
         <CardTitle>About me</CardTitle>
         <CardDescription className=" text-blue-600 font-bold ">
-          Dev by day, gamer by night, hardworking, responsible, and competitive
-          person.
+          Dev by day, gamer by night. Hardworking, responsible, and competitive.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -82,7 +81,6 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
         </div>
       </CardContent>
       <CardFooter>
-        
         <div className="flex w-full gap-2 justify-end">
           <IconBadge
             backgroundColor="#4267B2"
@@ -94,8 +92,13 @@ const About: React.FC<AboutProps> = ({ className, ...props }) => {
             url="https://github.com/viekoi"
             iconName="github"
           />
+
+           <IconBadge
+            backgroundColor="#0077B5"
+            url="https://www.linkedin.com/in/nguyen-viet-khoi-07677a27b/"
+            iconName="linkedin"
+          />
         </div>
-       
       </CardFooter>
     </Card>
   );

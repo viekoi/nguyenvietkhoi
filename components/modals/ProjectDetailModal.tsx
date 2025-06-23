@@ -1,9 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Badge, { TImageUrlVariants } from "../ui/Badge";
 import Modal from "./Modal";
-import Badge from "../ui/Badge";
-import { imageUrlVariants } from "../ui/Badge";
-import { ValueOf } from "next/dist/shared/lib/constants";
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
@@ -12,9 +10,9 @@ interface ProjectDetailModalProps {
   type: string;
   description:string
   stacks: {
-    frontend: (imageUrlVariants[`variant`])[];
-    backend: (imageUrlVariants[`variant`])[];
-    database: (imageUrlVariants[`variant`])[];
+    frontend: (TImageUrlVariants[`variant`])[];
+    backend: (TImageUrlVariants[`variant`])[];
+    database: (TImageUrlVariants[`variant`])[];
   };
 }
 
@@ -26,10 +24,10 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   type,
   stacks,
 }) => {
-  const [isMounted, setIsmounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsmounted(true);
+    setIsMounted(true);
   }, []);
 
   if (!isMounted) return null;
